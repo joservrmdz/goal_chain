@@ -6,14 +6,14 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-solana_goal_chain = "AsjZ3kWAUSQRNt2pZVeJkywhZ6gpLpHZmJjduPmKZDZZ"
+goal_chain = "39o3Jfso4ncRMNAcyNVscZLxbDrkXGePP4xpzJzoamXm"
 
 [registry]
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "Localnet"
-wallet = "~/.config/solana/id.json"
+cluster = "http://localhost:8899"
+wallet = "~/my-solana-wallet/my-keypair.json"
 
 [scripts]
 test = "../node_modules/.bin/jest --preset ts-jest"

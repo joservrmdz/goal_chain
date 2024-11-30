@@ -1,0 +1,106 @@
+{
+  "address": "39o3Jfso4ncRMNAcyNVscZLxbDrkXGePP4xpzJzoamXm",
+  "metadata": {
+    "name": "goal_chain",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "initialize_game",
+      "discriminator": [
+        44,
+        62,
+        102,
+        247,
+        126,
+        208,
+        130,
+        215
+      ],
+      "accounts": [
+        {
+          "name": "signer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "game",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "arg",
+                "path": "game_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "game_id",
+          "type": "u64"
+        },
+        {
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "name": "started_at",
+          "type": "u64"
+        },
+        {
+          "name": "ended_at",
+          "type": "u64"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Game",
+      "discriminator": [
+        27,
+        90,
+        166,
+        125,
+        74,
+        100,
+        121,
+        18
+      ]
+    }
+  ],
+  "types": [
+    {
+      "name": "Game",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "game_id",
+            "type": "u64"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "started_at",
+            "type": "u64"
+          },
+          {
+            "name": "ended_at",
+            "type": "u64"
+          }
+        ]
+      }
+    }
+  ]
+}
